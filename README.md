@@ -4,4 +4,3 @@ Java
 Spring Boot
 Spring MVC
 Maven
-TomСat
