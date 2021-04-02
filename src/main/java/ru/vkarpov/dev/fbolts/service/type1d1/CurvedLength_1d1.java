@@ -1,5 +1,7 @@
 package ru.vkarpov.dev.fbolts.service.type1d1;
-
+/*
+ * Possible curved length for type 1.1
+ */
 public enum CurvedLength_1d1 {
     D12(40),
     D16(50),

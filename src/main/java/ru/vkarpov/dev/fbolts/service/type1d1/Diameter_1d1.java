@@ -1,5 +1,7 @@
 package ru.vkarpov.dev.fbolts.service.type1d1;
-
+/*
+ * All possible foundation bolts diameters for type 1.1
+ */
 public enum Diameter_1d1 {
     D12(12),
     D16(16),
