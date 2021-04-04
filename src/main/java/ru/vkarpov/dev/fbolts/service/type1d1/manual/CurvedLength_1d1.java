@@ -1,4 +1,4 @@
-package ru.vkarpov.dev.fbolts.service.type1d1;
+package ru.vkarpov.dev.fbolts.service.type1d1.manual;
 /*
  * Possible curved length for type 1.1
  */

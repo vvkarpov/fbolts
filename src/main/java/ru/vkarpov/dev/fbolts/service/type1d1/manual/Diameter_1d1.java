@@ -1,4 +1,4 @@
-package ru.vkarpov.dev.fbolts.service.type1d1;
+package ru.vkarpov.dev.fbolts.service.type1d1.manual;
 /*
  * All possible foundation bolts diameters for type 1.1
  */
