@@ -17,6 +17,6 @@ public class BoltCostCalculation implements CostCalculation, WorkpieceCalculatio
 
     @Override
     public double weightStudCalculation(int diameterBolt, double sweepLengthBolt) {
-        return WEIGHT_RATIO * (diameterBolt / 20.0) * (diameterBolt / 20.0) * (sweepLengthBolt / 10000);
+        return WEIGHT_RATIO * Math.pow((diameterBolt / 20.0), 2) * (sweepLengthBolt / 10000);
     }
 }
