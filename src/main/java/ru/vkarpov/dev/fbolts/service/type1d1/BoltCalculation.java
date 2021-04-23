@@ -1,6 +1,6 @@
 package ru.vkarpov.dev.fbolts.service.type1d1;
 
-public class BoltCostCalculation implements CostCalculation, WorkpieceCalculation {
+public class BoltCalculation implements CostCalculation, WorkpieceCalculation {
 
     private static final double BENDING_RATIO = 0.644;
     private static final double WEIGHT_RATIO = 24.65;
