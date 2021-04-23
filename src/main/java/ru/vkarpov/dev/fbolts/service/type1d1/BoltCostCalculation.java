@@ -1,8 +1,22 @@
 package ru.vkarpov.dev.fbolts.service.type1d1;
 
-public class BoltCostCalculation implements CostCalculation {
+public class BoltCostCalculation implements CostCalculation, WorkpieceCalculation {
+
+    private static final double BENDING_RATIO = 0.644;
+    private static final double WEIGHT_RATIO = 24.65;
+
     @Override
-    public float costStudCalculation(float weightStud, float priceMetal) {
+    public double costStudCalculation(double weightStud, double priceMetal) {
         return weightStud * priceMetal;
+    }
+
+    @Override
+    public double sweepLengthCalculation(int diameterBolt, int straightPartLengthBolt, int curvedPartLengthBolt) {
+        return (straightPartLengthBolt + curvedPartLengthBolt) - BENDING_RATIO * diameterBolt;
+    }
+
+    @Override
+    public double weightStudCalculation(int diameterBolt, double sweepLengthBolt) {
+        return WEIGHT_RATIO * (diameterBolt / 20.0) * (diameterBolt / 20.0) * (sweepLengthBolt / 10000);
     }
 }

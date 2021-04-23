@@ -4,6 +4,6 @@ package ru.vkarpov.dev.fbolts.service.type1d1;
  */
 public interface WorkpieceCalculation {
 
-    float sweepLengthCalculation(int diameterBolt, int straightPartLengthBolt, int curvedPartLengthBolt);
-    float weightStudCalculation(int diameterBolt, float sweepLengthBolt);
+    double sweepLengthCalculation(int diameterBolt, int straightPartLengthBolt, int curvedPartLengthBolt);
+    double weightStudCalculation(int diameterBolt, double sweepLengthBolt);
 }
