@@ -2,7 +2,7 @@ package ru.vkarpov.dev.fbolts.service.type1d1.manual;
 /*
  * All possible foundation bolts diameters for type 1.1
  */
-public enum Diameter_1d1 {
+public enum BoltDiameter_1d1 {
     D12(12),
     D16(16),
     D20(20),
@@ -14,7 +14,7 @@ public enum Diameter_1d1 {
 
     public final int count;
 
-    Diameter_1d1(int count) {
+    BoltDiameter_1d1(int count) {
         this.count = count;
     }
 }

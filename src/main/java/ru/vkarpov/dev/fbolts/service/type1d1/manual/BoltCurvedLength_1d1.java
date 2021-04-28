@@ -2,7 +2,7 @@ package ru.vkarpov.dev.fbolts.service.type1d1.manual;
 /*
  * Possible curved length for type 1.1
  */
-public enum CurvedLength_1d1 {
+public enum BoltCurvedLength_1d1 {
     D12(40),
     D16(50),
     D20(60),
@@ -14,7 +14,7 @@ public enum CurvedLength_1d1 {
 
     public final int count;
 
-    CurvedLength_1d1(int count) {
+    BoltCurvedLength_1d1(int count) {
         this.count = count;
     }
 }
