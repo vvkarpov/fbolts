@@ -5,6 +5,47 @@
     <title>Main page</title>
 </head>
 <body>
+
+<div class="form-wrap">
+        <h1>Расчет фундаментных болтов</h1>
+    <form method="post" action="/calc">
+
+        <div>
+            <label for="bolt_diameter">Диаметр болта</label>
+            <select name="bolt_diameter">
+                <option>Выберите диаметр</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="30">30</option>
+                <option value="36">36</option>
+                <option value="42">42</option>
+                <option value="48">48</option>
+            </select>
+
+        </div>
+
+        <div>
+            <label for="length">Длина болта</label>
+            <input type="text" name="length" required>
+        </div>
+
+        <div>
+            <label for="price_metal">Цена металла</label>
+            <input type="text" name="price_metal" required>
+        </div>
+
+        <div>
+            <label for="count">Количество</label>
+            <input type="text" name="count">
+        </div>
+
+        <button type="submit">Рассчитать</button>
+    </form>
+</div>
+
+
 <p>Get your greeting <a href="/greeting">here</a></p>
 </body>
 </html>
