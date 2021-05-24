@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Main page</title>
+    <title>Расчет фундаментных болтов | ДИВИЗИОН</title>
 </head>
 <body>
 
@@ -11,8 +11,8 @@
     <form method="post" action="/calc">
 
         <div>
-            <label for="bolt_diameter">Диаметр болта</label>
-            <select name="bolt_diameter">
+            <label for="diameter_bolt">Диаметр болта</label>
+            <select name="diameter_bolt">
                 <option>Выберите диаметр</option>
                 <option value="12">12</option>
                 <option value="16">16</option>
@@ -27,8 +27,8 @@
         </div>
 
         <div>
-            <label for="length">Длина болта</label>
-            <input type="text" name="length" required>
+            <label for="length_bolt">Длина болта</label>
+            <input type="text" name="length_bolt" required>
         </div>
 
         <div>
@@ -37,8 +37,8 @@
         </div>
 
         <div>
-            <label for="count">Количество</label>
-            <input type="text" name="count">
+            <label for="count_bolt">Количество</label>
+            <input type="text" name="count_bolt" required>
         </div>
 
         <button type="submit">Рассчитать</button>
