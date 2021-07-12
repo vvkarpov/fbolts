@@ -1,13 +1,38 @@
 package ru.vkarpov.dev.fbolts.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import ru.vkarpov.dev.fbolts.model.FBolt;
+import ru.vkarpov.dev.fbolts.service.type1d1.BoltCalculation;
+import ru.vkarpov.dev.fbolts.service.type1d1.manual.BoltCurvedLength_1d1;
 
 @Controller
 public class BoltCalculationController {
 
-    @RequestMapping(value = "/")
-    public String boltCalculationController(){
-        return "index";
+    @RequestMapping(value = "/calc")
+    public String boltCalculationController(@RequestParam(name = "diameter_bolt") int diameterBolt,
+                                            @RequestParam(name = "length_bolt") int straightPartLengthBolt,
+                                            @RequestParam(name = "price_metal") double priceMetal,
+                                            @RequestParam(name = "count_bolt") double countBolts,
+                                            Model model) {
+
+        BoltCalculation boltCalculation = new BoltCalculation();
+        FBolt fBolt = new FBolt(diameterBolt,
+                                straightPartLengthBolt,
+                                boltCalculation.sweepLengthCalculation(diameterBolt, straightPartLengthBolt, getBoltCurvedLength(diameterBolt))),
+
+
+
+/*
+        model.addAttribute("diameter_bolt", diameterBolt);
+*/
+
+        return "calc";
+    }
+
+    private int getBoltCurvedLength(int diameterBolt){
+        return 0;
     }
 }

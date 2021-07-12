@@ -1,6 +1,6 @@
 package ru.vkarpov.dev.fbolts.model;
 
-public class Model {
+public class FBolt {
     private int diameterBolt;
     private int lengthBolt;
     private double sweepLengthBolt;
@@ -25,7 +25,7 @@ public class Model {
     private double priceStud;
     private double priceBolt;
 
-    public Model(int diameterBolt, int lengthBolt, double sweepLengthBolt, double weightStud,
+    public FBolt(int diameterBolt, int lengthBolt, double sweepLengthBolt, double weightStud,
                  int countNuts, int countWashers, int countBolts, double weightNuts,
                  double weightWashers, double weightBolts, double priceMetal, double priceNut,
                  double priceWasher, double costStud, double costNut, double costWasher,
