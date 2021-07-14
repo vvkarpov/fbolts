@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.vkarpov.dev.fbolts.model.FBolt;
 import ru.vkarpov.dev.fbolts.service.type1d1.BoltCalculation;
-import ru.vkarpov.dev.fbolts.service.type1d1.manual.BoltCurvedLength_1d1;
+import ru.vkarpov.dev.fbolts.service.type1d1.utils.GetValuesFromManual;
 
 @Controller
 public class BoltCalculationController {
@@ -21,7 +21,7 @@ public class BoltCalculationController {
         BoltCalculation boltCalculation = new BoltCalculation();
         FBolt fBolt = new FBolt(diameterBolt,
                                 straightPartLengthBolt,
-                                boltCalculation.sweepLengthCalculation(diameterBolt, straightPartLengthBolt, getBoltCurvedLength(diameterBolt))),
+                                boltCalculation.sweepLengthCalculation(diameterBolt, straightPartLengthBolt, GetValuesFromManual.getBoltCurvedLength(diameterBolt)),
 
 
 
@@ -32,7 +32,4 @@ public class BoltCalculationController {
         return "calc";
     }
 
-    private int getBoltCurvedLength(int diameterBolt){
-        return 0;
-    }
 }
