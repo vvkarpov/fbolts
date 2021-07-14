@@ -4,9 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.vkarpov.dev.fbolts.model.FBolt;
-import ru.vkarpov.dev.fbolts.service.type1d1.BoltCalculation;
-import ru.vkarpov.dev.fbolts.service.type1d1.utils.GetValuesFromManual;
 
 @Controller
 public class BoltCalculationController {
@@ -15,14 +12,8 @@ public class BoltCalculationController {
     public String boltCalculationController(@RequestParam(name = "diameter_bolt") int diameterBolt,
                                             @RequestParam(name = "length_bolt") int straightPartLengthBolt,
                                             @RequestParam(name = "price_metal") double priceMetal,
-                                            @RequestParam(name = "count_bolt") double countBolts,
+                                            @RequestParam(name = "count_bolts") int countBolts,
                                             Model model) {
-
-        BoltCalculation boltCalculation = new BoltCalculation();
-        FBolt fBolt = new FBolt(diameterBolt,
-                                straightPartLengthBolt,
-                                boltCalculation.sweepLengthCalculation(diameterBolt, straightPartLengthBolt, GetValuesFromManual.getBoltCurvedLength(diameterBolt)),
-
 
 
 /*
@@ -31,5 +22,4 @@ public class BoltCalculationController {
 
         return "calc";
     }
-
 }
